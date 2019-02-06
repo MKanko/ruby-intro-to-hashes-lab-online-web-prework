@@ -9,12 +9,17 @@ def actor
 end
 
 def monopoly
-	monopoly = {railroads: {}}  # This way "implicitly" returns itself (last line of code in the method) with the change (added key and value).
+	monopoly = {railroads: {}}  
+	
+	# This way "implicitly" returns itself (last line of code in the method) with the change (added key and value).
 
 # or
 
-#	monopoly[:railroads] = {}   # To add key and value (value being an empty hash) this way, have to remember to "implicitly" return the changed hash (monopoly).
+#	monopoly[:railroads] = {}   
 #	monopoly
+
+# To add key and value (value being an empty hash) this way, have to remember to "implicitly" (not an explicit "return monopoly") return the changed hash (monopoly).
+
 end
 
 def monopoly_with_second_tier
@@ -36,7 +41,7 @@ def monopoly_with_third_tier
 end
 
 def monopoly_with_fourth_tier
-   monopoly = {railroads: {}}
+  monopoly = {railroads: {}}
   monopoly[:railroads] = {:pieces => 4}
 	monopoly[:railroads] = {:pieces => 4, :names => {}} 
 	monopoly[:railroads] = {:pieces => 4, :names => {}, :rent_in_dollars => {}}
